@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2022/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="VehicleWorldMAUI.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="25" Padding="30,0" VerticalOptions="Center">
+
+            <Label 
+                Text="Vehicle World"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Picker 
+                x:Name="vehiclePicker" 
+                Title="Choose a Vehicle"
+                SelectedIndexChanged="OnVehicleSelected"
+                HorizontalOptions="Center">
+                <Picker.Items>
+                    <x:String>Car</x:String>
+                    <x:String>Motorcycle</x:String>
+                    <x:String>Bicycle</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Image 
+                x:Name="vehicleImage"
+                SemanticProperties.Description="Vehicle image"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label 
+                x:Name="vehicleFactLabel"
+                SemanticProperties.Description="Vehicle fact"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
